@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Chop Yew Lee Petroleum")
+st.header("Chop Yew Lee Petroleum")
 st.title("Caltex B2B Calculator")
 st.write("Check if Ancillary Range is ≥ 15% of Total Litres")
 
@@ -29,6 +29,7 @@ st.markdown("""
             - Greases (Starplex, Multifak, Marfak) 
             - Delo XLI/XLC 
             - Brake Fluid""")
+
 
 
 
