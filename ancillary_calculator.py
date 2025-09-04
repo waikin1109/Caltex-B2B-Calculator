@@ -20,6 +20,10 @@ if total_litres > 0:
 elif total_litres == 0 and (ancillary_litres > 0):
     st.warning("⚠️ Total litres cannot be zero.")
 
+# Ancillary Range
+print("Ancillary Range:")
+print("Delo Gear\n ATF-J or Texamatic 1888\n Delo TorqForce\n Greases\n Delo XLI/XLC\n Brake Fluid")
+
 
 
 
