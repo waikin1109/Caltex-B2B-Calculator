@@ -22,12 +22,14 @@ elif total_litres == 0 and (ancillary_litres > 0):
 
 # Ancillary Range
 st.write("Ancillary Range:")
-st.markdown("""Delo Gear 
-            ATF-J or Texamatic 1888 
-            Delo TorqForce 
-            Greases (Starplex, Multifak, Marfak) 
-            Delo XLI/XLC 
-            Brake Fluid""")
+st.markdown("""
+            - Delo Gear 
+            - ATF-J or Texamatic 1888 
+            - Delo TorqForce 
+            - Greases (Starplex, Multifak, Marfak) 
+            - Delo XLI/XLC 
+            - Brake Fluid""")
+
 
 
 
