@@ -11,7 +11,7 @@ total_litres = st.number_input("Enter Total Litres: ", min_value=0.0, step=0.1)
 # Calculation
 if total_litres > 0:
     percentage = (ancillary_litres / total_litres) * 100
-    st.metric(label="Ancillary Percentage", value=f"{percentage:.2f}")
+    st.metric(label="Ancillary Percentage", value=f"{percentage:.2f}%")
     if percentage >= 15:
         st.success("✅ Ancillary range is ≥ 15% of total litres.")
     else:
@@ -28,6 +28,7 @@ st.markdown("""
             - Greases (Starplex, Multifak, Marfak) 
             - Delo XLI/XLC 
             - Brake Fluid""")
+
 
 
 
