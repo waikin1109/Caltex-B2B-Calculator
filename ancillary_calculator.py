@@ -1,25 +1,24 @@
 import streamlit as st
 
-st.title("Calculator-Style Ratio Output")
-st.header("Chop Yew Lee Petroleum")
-st.subheader("Caltex B2B Ratio Calculator")
-
-st.write("""
-This calculator divides **Total Litres** by **Ancillary Litres**, just like typing `418 ÷ 18 × 100%` 
-on a calculator — which gives **23.22**, NOT a percentage.
-""")
+st.title("Chop Yew Lee Petroleum")
+st.header("Caltex B2B Calculator")
+st.write("Check if Ancillary Range is ≥ 15% of Total Litres")
 
 # Input fields
-value1 = st.number_input("Enter Total Litres (e.g. 2 drums + 1 pail = 418):", min_value=0.0, step=0.1)
-value2 = st.number_input("Enter Ancillary Litres (e.g. 1 pail = 18):", min_value=0.0, step=0.1)
+ancillary_litres = st.number_input("Enter Ancillary Litres: ", min_value=0.0, step=0.1)
+total_litres = st.number_input("Enter Total Litres: ", min_value=0.0, step=0.1)
 
-# Validation and result
-if value2 == 0 and value1 > 0:
-    st.warning("⚠️ Ancillary litres (denominator) cannot be zero.")
-elif value2 > 0:
-    result = value1 / value2
-    st.metric(label="Calculator-style result", value=f"{result:.2f}")
+# Calculation
+if total_litres > 0:
+    percentage = (ancillary_litres / total_litres) * 100
+    st.metric(label="Ancillary Percentage", value=f"{percentage:.2f}%")
 
+    if percentage >= 15:
+        st.success("✅ Ancillary range is ≥ 15% of total litres.")
+    else:
+        st.error("❌ Ancillary range is < 15% of total litres.")
+elif total_litres == 0 and (ancillary_litres > 0):
+    st.warning("⚠️ Total litres cannot be zero.")
 
 # Ancillary Range
 st.write("Ancillary Range:")
@@ -30,14 +29,6 @@ st.markdown("""
             - Greases (Starplex, Multifak, Marfak) 
             - Delo XLI/XLC 
             - Brake Fluid""")
-
-
-
-
-
-
-
-
 
 
 
